@@ -1,0 +1,343 @@
+
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 20px;
+}
+
+:root {
+    --color-fondo: #121212;      /* Negro profundo */
+    --color-caja: #1E1E1E;       /* Gris oscuro para el contenedor */
+    --color-texto: #E0E0E0;      /* Gris claro para que no canse la vista */
+    --color-acento: #00ADB5;     /* Cian tecnológico */
+}
+
+
+
+
+.primeraDivision{
+
+    background-color: var(--color-caja);
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    margin: 0;
+    border-radius: 15px;
+    
+   
+}
+
+.primeraDivision{
+
+    margin-top: 0 !important;
+    padding-top: 50px;
+}
+
+.primerTitulo{
+
+        color: var(--color-texto);
+        width: 100%;
+        text-align:center;
+        text-decoration:underline;
+        font-size: 11px;
+        font-family:  Arial, Helvetica, sans-serif;
+
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;                   /* Más espacio entre opciones da aire "premium" */
+    margin-top: 25px;
+    padding: 0;
+    
+}
+
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-family: 'Montserrat', sans-serif; /* Si la instalaste, si no, usa Arial */
+    font-size: 14px;
+    letter-spacing: 2px;         /* Espaciado entre letras para toque moderno */
+    text-transform: uppercase;   /* Todo en mayúsculas se ve más profesional */
+    transition: 0.4s;
+    position: relative;          /* Necesario para el efecto de la rayita */
+}
+
+.menu-navegacion a:hover {
+    color: var(--color-acento);
+}
+
+.menu-navegacion a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-acento);
+    transition: width .3s;
+}
+
+.menu-navegacion a:hover::after {
+    width: 100%;
+}
+
+.segundaDivision{
+    scroll-margin-top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+
+    background-color: var(--color-caja);
+    padding: 0.30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.segundaDivision:target{
+    opacity: 1;
+    visibility: visible;
+    max-height: 2000px;
+    padding: 30px;
+    transform: translateY(0);
+}
+
+.terceraDivision{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+
+    background-color: var(--color-caja);
+    padding: 0.30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.terceraDivision:target{
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px;
+    padding: 30px;
+    transform: translateY(0);
+}
+
+/*.cuartaDivision{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+
+    background-color: var(--color-caja);
+    padding: 0.30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuartaDivision:target{
+
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px;
+    padding: 30px;
+    transform: translateY(0);
+
+}*/
+
+
+
+.menu {
+    position: -webkit-sticky !important;
+    position: sticky;   
+    top: 0;
+    width: 100%;        /* Con fixed es obligatorio definir el ancho */
+    background-color: #1E1E1E;
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    margin-top: 20px;
+    box-sizing: border-box; 
+    border-radius: 15px;
+}
+
+body {
+    padding-top: 0 !important;
+    margin: 0; /* Ajusta este valor según el alto de tu menú */
+}
+
+
+.boton-cerrar {
+    text-decoration: none;
+    color: var(--color-acento); /* Usamos tu color cian */
+    font-size: 24px;
+    font-weight: bold;
+    float: right;      /* Lo mueve a la derecha */
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.boton-cerrar:hover {
+    color: #ff4d4d;    /* Se pone rojo al pasar el mouse */
+    transform: scale(1.2); /* Crece un poquito */
+}
+/* Contenedor para alinear el botón a la derecha */
+.contenedor-boton {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.boton-cerrar-texto {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--color-acento);
+    border: 1px solid var(--color-acento);
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.boton-cerrar-texto:hover {
+    background-color: var(--color-acento); /* Se rellena de color */
+    color: #121212; /* El texto se pone oscuro para contrastar */
+    box-shadow: 0 0 10px var(--color-acento); /* Brillo tecnológico */
+}
+
+
+.formulario-basico {
+    display: flex;
+    flex-direction: column; /* Pone los inputs uno abajo del otro */
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto; /* Centra el formulario */
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    color: var(--color-acento);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input {
+    background-color: #121212;
+    border: 1px solid #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--color-acento); /* Brilla al hacer clic */
+}
+
+.boton-enviar {
+    background-color: var(--color-acento);
+    color: #121212;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-enviar:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px var(--color-acento);
+}
+
+
+.galeriaCascada {
+    position:static;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo de tu portafolio */
+    margin: 0 auto;   /* Centra la galería */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Una debajo de otra */
+    gap: 40px; /* Espacio entre cada foto */
+}
+
+.galeria {
+    width: 100%;
+    background:var(--color-caja); /* Opcional: un fondo suave */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.galeria img {
+    width: 100%;
+    height: auto; /* Que la foto use su altura natural para no cortarse */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: se agranda un poquito al pasar el mouse */
+.galeria img:hover {
+    transform: scale(1.02);
+}
+
+.galeria p {
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+}
+
+.descripcionFoto{
+    color: var(--color-texto);
+}
+
+
+/*.video{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+
+    background-color: var(--color-caja);
+    padding: 0.30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.video:target{
+
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px;
+    padding: 30px;
+    transform: translateY(0);
+
+}
