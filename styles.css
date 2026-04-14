@@ -1,15 +1,27 @@
 
+
+
+
+
 body {
     background-color: #121212;
     margin: 0;
     padding: 20px;
+    
 }
 
 :root {
+    --font-principal: "Playfair Display", serif;
     --color-fondo: #121212;      /* Negro profundo */
     --color-caja: #1E1E1E;       /* Gris oscuro para el contenedor */
     --color-texto: #E0E0E0;      /* Gris claro para que no canse la vista */
     --color-acento: #00ADB5;     /* Cian tecnológico */
+    
+}
+
+/* Aplicar Playfair Display a todos los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-principal);
 }
 
 
@@ -19,7 +31,7 @@ body {
 
     background-color: var(--color-caja);
     width: 100%;
-    padding: 30px;
+    padding: 15px;
     box-sizing: border-box;
     border: 1px solid #333;
     margin: 0;
@@ -31,7 +43,7 @@ body {
 .primeraDivision{
 
     margin-top: 0 !important;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 .primerTitulo{
@@ -40,10 +52,21 @@ body {
         width: 100%;
         text-align:center;
         text-decoration:underline;
-        font-size: 11px;
-        font-family:  Arial, Helvetica, sans-serif;
+        text-decoration-color: var(--color-acento);
+        font-size: 30px;
+        font-family: var(--font-principal);
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: oblique;
+        
+}
+
+.resaltado{
+
+    color:var(--color-acento);
 
 }
+
 
 .menu-navegacion ul {
     list-style: none;
@@ -59,7 +82,10 @@ body {
 .menu-navegacion a {
     text-decoration: none;
     color: var(--color-texto);
-    font-family: 'Montserrat', sans-serif; /* Si la instalaste, si no, usa Arial */
+    font-family: var(--font-principal); /* Si la instalaste, si no, usa Arial */
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
     font-size: 14px;
     letter-spacing: 2px;         /* Espaciado entre letras para toque moderno */
     text-transform: uppercase;   /* Todo en mayúsculas se ve más profesional */
@@ -98,7 +124,7 @@ body {
     border-radius: 15px;
     margin-top: 20px;
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
 }
 
 .segundaDivision:target{
@@ -122,7 +148,7 @@ body {
     border-radius: 15px;
     margin-top: 20px;
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
 }
 
 .terceraDivision:target{
@@ -133,36 +159,8 @@ body {
     transform: translateY(0);
 }
 
-/*.cuartaDivision{
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    overflow: hidden;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-
-    background-color: var(--color-caja);
-    padding: 0.30px;
-    border-radius: 15px;
-    margin-top: 20px;
-    color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.cuartaDivision:target{
-
-    opacity: 1;
-    visibility: visible;
-    max-height: 1000px;
-    padding: 30px;
-    transform: translateY(0);
-
-}*/
-
-
-
 .menu {
-    position: -webkit-sticky !important;
+   
     position: sticky;   
     top: 0;
     width: 100%;        /* Con fixed es obligatorio definir el ancho */
@@ -170,7 +168,7 @@ body {
     z-index: 1000;
     padding: 10px 0;
     border-bottom: 1px solid #333;
-    margin-top: 20px;
+    margin-top: 10px;
     box-sizing: border-box; 
     border-radius: 15px;
 }
@@ -208,7 +206,11 @@ body {
     border: 1px solid var(--color-acento);
     padding: 5px 15px;
     border-radius: 8px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
+        
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -277,7 +279,7 @@ input:focus {
     position:static;
     width: 100%;
     max-width: 800px; /* Ancho máximo de tu portafolio */
-    margin: 0 auto;   /* Centra la galería */
+    margin: 6px -18px;   /* Centra la galería */
     padding: 20px;
     display: flex;
     flex-direction: column; /* Una debajo de otra */
@@ -307,7 +309,11 @@ input:focus {
 .galeria p {
     padding: 15px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
+        
     color: var(--color-texto);
 }
 
@@ -326,7 +332,10 @@ input:focus {
     border-radius: 15px;
     margin-top: 20px;
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
     /* grid-template-columns: ; */
 
     align-items: center;
@@ -353,19 +362,26 @@ input:focus {
     align-self: top;
     justify-self: center;
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
 
 
 }
 
 .tituloportafolio{
 
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
-    align-self: top;
+    
     justify-self: center;
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+
+    font-style: oblique;
+    font-size: 15px;
 }
 
 
@@ -455,10 +471,11 @@ input:focus {
 
     background-color: var(--color-caja);
     width: 100%;
-    padding: 30px;
+    padding: 15px;
     box-sizing: border-box;
     border: 1px solid #333;
-    margin: 0;
+    margin: 10px;
+    margin-top: 10px;
     border-radius: 15px;
     
 
@@ -473,9 +490,12 @@ input:focus {
         text-align:center;
         text-decoration:underline;
         font-size: 11px;
-        font-family:  Arial, Helvetica, sans-serif;
+        font-family: var(--font-principal);
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: oblique;
         margin-top: 0 !important;
-        padding-top: 50px;
+        padding-top: 15px;
 
   }
 
@@ -515,7 +535,10 @@ input:focus {
 .imagenPlan p {
     padding: 15px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
     color: var(--color-texto);
 }
 
@@ -557,6 +580,9 @@ input:focus {
 .imagenPlan p {
     padding: 15px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-principal);
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: oblique;
     color: var(--color-texto);
 }
