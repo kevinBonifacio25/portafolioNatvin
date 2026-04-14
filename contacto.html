@@ -3,71 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contacto</title>
+    <title>contactenos</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://png.pngtree.com/png-vector/20240921/ourlarge/pngtree-modern-camera-icon-minimalist-black-outline-png-image_13880231.png" type="image/png">
 
 </head>
 <body>
 
-
-
-
-    <section class="cuartaDivision">
-        <h3>Contactanos</h3>
+ <!-- HEADER -->
+    <section class="primeraDivision">
+        <header class="primerTitulo">           
+            <h1><span class="resaltado">4K</span>evin Ph</h1>          
+        </header>
     </section>
 
-        <div class="menu">
+    <!-- MENÚ -->
+    <div class="menu">
         <nav class="menu-navegacion">
             <ul>
-                <li><a href="index.html">quienes somos</a></li> <!-- página principal -->
-                <li><a href="servicio.html" >servicios</a></li>
-                <li><a href="portafolio.html" >portafolio</a></li> 
-                <li><a href="contacto.html" >contact</a></li>
-                <li><a href="https://www.instagram.com/kevin_bonifacio99?igsh=MTZyMWNlMW9xanZocA==" target="_blank" rel="noopener noreferrer">instagram</a></li>
+                <li><a href="index.html">Inicio</a></li> <!-- página principal -->
+                <li><a href="quienessomos.html">quienes somos</a></li>
+                <li><a href="servicio.html">servicios</a></li>
+                <li><a href="portafolio.html">portafolio</a></li> 
+                <li><a href="contacto.html">contact</a></li>
+                <li><a href="https://www.instagram.com/kevin_bonifacio99" target="_blank">instagram</a></li>
             </ul>
         </nav>
-        
     </div>
 
-    <br>
+<div class="contact-section">
+    
+    <!-- FORMULARIO -->
+    <div class="form-container">
+        <form class="contact-form">
+            <h2>📩 Contáctanos</h2>
+            <p>Déjanos tu mensaje y te responderemos pronto</p>
 
-    <section>
-        <form action="#" method="post" class="formulario">
-
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+            <div class="input-group">
+                <input type="text" required placeholder=" ">
+                <label>Nombre completo</label>
             </div>
 
-            <div class="campo">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Ingrese su email">
+            <div class="input-group">
+                <input type="email" required placeholder=" ">
+                <label>Correo electrónico</label>
             </div>
 
-            <button type="submit" class="botonEnviar">Enviar mensaje</button>
-
-            <div>
-            <a href="#" class="boton-cerrar">Inicio</a> 
+            <div class="input-group">
+                <input type="tel" placeholder=" ">
+                <label>Teléfono</label>
             </div>
 
+            <div class="input-group">
+                <select required>
+                    <option value="" disabled selected></option>
+                    <option>Soporte</option>
+                    <option>Ventas</option>
+                    <option>Información</option>
+                    <option>Arquiler de equipo</option>
+                </select>
+                <label>Motivo</label>
+            </div>
 
+            <div class="input-group">
+                <textarea rows="4" required placeholder=" "></textarea>
+                <label>Mensaje</label>
+            </div>
+
+            <button type="submit">Enviar mensaje 🚀</button>
         </form>
-    </section>
-   
+    </div>
 
+    <!-- MAPA -->
+    <div class="map-container">
+        <h3>📍 Aquí nos puedes encontrar</h3>
+        <p>Visítanos o agenda una cita, estaremos encantados de atenderte.</p>
 
-
-
-    <section class="titulomapa">
-        <h3 >Encuentranos aqui:</h3>
-    </section>
-
-
-    <section class="mapa">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10032.29351107844!2d44.40665928173297!3d33.384194966819365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1775848519609!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31346.756868629273!2d-74.77469895!3d10.8613725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5ce045e54600b%3A0x29035b3d71c58e7a!2sMalambo%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1776154593384!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </body>
 </html>
