@@ -20,8 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
 .primeraDivision{
 
     background-color: var(--color-caja);
@@ -911,4 +909,57 @@ button:hover {
 .imagen img {
     width: 100%;
     border-radius: 15px;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+/* CONTENEDOR */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* COLUMNAS */
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+}
+
+.footer-box p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+.footer-box a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-box a:hover {
+    color: var(--color-acento);
+}
+
+/* PARTE FINAL */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #888;
 }
